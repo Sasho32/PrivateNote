@@ -28,7 +28,7 @@ class NotesController < ApplicationController
 
     respond_to do |format|
       if @note.save
-        format.html { render "info", locals: {url: "kzl/" + @note.id.to_s}}
+        format.html { render "info", locals: {url: "localhost:3000/posts/" + @note.id.to_s}}
         format.json { render :show, status: :created, location: @note }
       else
         format.html { render :new }
